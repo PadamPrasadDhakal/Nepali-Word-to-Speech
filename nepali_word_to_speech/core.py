@@ -1,64 +1,101 @@
-"""
-Core functionality for Nepali Word to Speech.
-"""
+from __future__ import print_function
 
-def speak(text, rate=1.0, volume=1.0):
-    """
-    Convert Nepali text to speech and play it.
-    
-    Args:
-        text (str): The Nepali text to convert to speech
-        rate (float, optional): Speech rate. Defaults to 1.0.
-        volume (float, optional): Speech volume. Defaults to 1.0.
-        
-    Returns:
-        bool: True if successful, False otherwise
-    """
-    # This is a placeholder for the actual implementation
-    print(f"Speaking: {text}")
-    print(f"Rate: {rate}, Volume: {volume}")
-    return True
-
-
-def text_to_audio_file(text, output_file, rate=1.0, volume=1.0):
-    """
-    Convert Nepali text to speech and save to an audio file.
-    
-    Args:
-        text (str): The Nepali text to convert to speech
-        output_file (str): Path to save the audio file
-        rate (float, optional): Speech rate. Defaults to 1.0.
-        volume (float, optional): Speech volume. Defaults to 1.0.
-        
-    Returns:
-        bool: True if successful, False otherwise
-    """
-    # This is a placeholder for the actual implementation
-    print(f"Converting text to audio file: {output_file}")
-    print(f"Text: {text}")
-    print(f"Rate: {rate}, Volume: {volume}")
-    return True
-
-
-def example_function():
-    """
-    Example function that returns a welcome message.
-    
-    Returns:
-        str: A welcome message
-    """
-    return "Welcome to yourpackage!"
-
-
-def add_numbers(a, b):
-    """
-    Add two numbers together.
-    
-    Args:
-        a: First number
-        b: Second number
-        
-    Returns:
-        The sum of a and b
-    """
-    return a + b 
+nepali_number={
+    'sunya':0,
+    'ek':1,
+    'dui':2,
+    "teen":3,
+    'chaar':4,
+    'paach':5,
+    'cha':6,
+    'saat':7,
+    'aath':8,
+    'nau':9,
+    'das':10,
+    'egharah':11,
+    'barah':12,
+    'terah':13,
+    'chaudah':14,
+    'pandrah':15,
+    'sorha':16,
+    'satrah':17,
+    'atharah':18,
+    'unnaish':19,
+    'biss':20,
+    'ekkaish':21,
+    'baaish':22,
+    'teish':23,
+    'chaubish':24,
+    'pacchish':25,
+    'chhabis':26,
+    'sattaish':27,
+    'atthaish':28,
+    'untish':29,
+    'tiss':30,
+    'ektiss':31,
+    'battiss':32,
+    'teetiss':33,
+    'chautiss':34,
+    'paitiss':35,
+    'chhattiss':36,
+    'sattiss':37,
+    'aathtiss':38,
+    'unchalis':39,
+    'chalis':40,
+    'ekchalis':41,
+    'bayachalis':42,
+    'trichalis':43,
+    'chauwaliss':44,
+    'paitalish':45,
+    'chayalish':46,
+    'satchalis':47,
+    'aathchalis':48,
+    'unpachaas':49,
+    'pachaas':50,
+    'ekkaunna':51,
+    'baunna':52,
+    'tripanna':53,
+    'chaunna':54,
+    'pachpanna':55,
+    'chapanna':56,
+    'santauna':57,
+    'anthaunna':58,
+    'unhansatthi':59,
+    'saxti':60,
+    'eksaxti':61,
+    'baisatthi':62,
+    'trisatthi':63,
+    'chausatthi':64,
+    'paisatthi':65,
+    'chaisatthi':66,
+    'sadsatthi':67,
+    'ekdus':71,
+    'duidus':72,
+    'teendus':73,
+    'chaarus':74,
+    'paachus':75,
+    'chhatus':76,
+    'satus':77,
+    'aathus':78,
+    'naus':79,
+    'asi':80,
+    'ekasi':81,
+    'duiasi':82,
+    'teeni':83,
+    'chaarasi':84,
+    'paachasi':85,
+    'chhasi':86,
+    'sataasi':87,
+    'aathasi':88,
+    'nauasi':89,
+    'nabbai':90,
+    'eknabbai':91,
+    'doinabbai':92,
+    'teenabbai':93,
+    'chaarabbai':94,
+    'paachabbai':95,
+    'chhaabbai':96,
+    'sataabbai':97,
+    'aathabbai':98,
+    'nauabbai':99,
+}
