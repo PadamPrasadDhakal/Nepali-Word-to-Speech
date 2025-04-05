@@ -121,14 +121,33 @@ def number_formulation(num_words):
     nums=[]
     for n_word in num_words:
         nums.append(nepali_number[n_word])
-    if len(nums) == 4:
+    if len(nums)>5:
+        if [100000,1000] in nums:
+            return (nums[0]*nums[1] + nums[2]*nums[3] + nums[4]*nums[5] + nums[6] )
+        # if 10000 in nums:
+            # return (nums[0]*nums[1]+nums[])
+    elif len(nums) == 4:
         return (nums[0] * nums[1]) + nums[2] + nums[3]
     elif len(nums) == 3:
         return nums[0] * nums[1] + nums[2]
     elif len(nums) == 2:
-        if 100 in nums:
+        if 1000 in nums:
             return nums[0] * nums[1]
         else:
             return nums[0] + nums[1]
     else:
-        return nums[0]
+        return nums
+    
+# Test examples
+print("Example 1: 'ek' (one) =", number_formulation(['ek']))
+print("Example 2: 'ek saya' (one hundred) =", number_formulation(['ek', 'saya']))
+print("Example 3: 'dui hajar' (two thousand) =", number_formulation(['dui', 'hajar']))
+print("Example 4: 'teen saya chaar' (three hundred and four) =", number_formulation(['teen', 'saya', 'chaar']))
+print("Example 5: 'paach hajar cha saya saat' =", number_formulation(['paach', 'hajar', 'cha', 'saya', 'saat']))
+print("'Ek lakh pach hajar tin saya nau",number_formulation(['ek','lakh','paach','hajar','teen','saya','nau']))
+
+"""
+function to convert decimal digit words to numerial digits
+input: list of strings
+output: double
+"""
