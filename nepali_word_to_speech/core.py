@@ -109,7 +109,7 @@ nepali_number={
     'karod':10000000,
     'arba':1000000000,
     'kharba':100000000000,
-    'dasamalabh':'.'
+    'dasamalab':'.'
 }
 
 """
@@ -176,4 +176,22 @@ def get_decimal(decimal_words):
 
   final_dec_str = '0.' + ''.join(decimal_num_str)
   return float(final_dec_str)
+
+"""
+Converts a textual number representation to its numerical value.
+
+Features:
+- Converts phrases like "ek lakh tin hajar cha saya nau" to 103609
+- Supports decimal numbers with "dasamalab" (e.g., "dui dasamalab tin")
+- Provides detailed error messages for invalid inputs
+
+Arguments:
+    number_sentence (str): A string containing the textual representation of a number
+
+Returns:
+    int or float: Numeric value based on there is presence of dasamalab or not(int or float resp)
+
+Raises:
+    ValueError: For invalid inputs, with specific error messages explaining the problem
+"""
 
