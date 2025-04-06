@@ -112,6 +112,10 @@ nepali_number={
     'dasamalab':'.'
 }
 
+
+def get_numbers_info():
+    print(nepali_number)
+
 """
 function to form numeric multipliers for 10th-lakh, 10th-karod, 10th-thousand etc.
 
@@ -194,4 +198,6 @@ Returns:
 Raises:
     ValueError: For invalid inputs, with specific error messages explaining the problem
 """
-
+ def word_to_num(number_sentence):
+         if type(number_sentence) is not str:
+            raise ValueError("Type of input is not string! Please enter a valid number word (e.g., 'tin hajar cha saya nau') for more info do get_numbers_info()")
