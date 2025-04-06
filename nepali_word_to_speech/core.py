@@ -145,3 +145,35 @@ def number_formulation(num_words):
     else:
         return nums[0]
     
+"""
+Convert decimal word to their numeric equivalent.
+valid : only from 0(sunya) to 9(nau)
+
+Arguments:
+    decimal_words (list): List of words representing decimal digits
+
+Returns:
+    float: The decimal part as a float (e.g., ["two", "siz"] becomes 0.26)
+
+Raises:
+    ValueError: If any invalid decimal words are found
+"""
+
+def get_decimal(decimal_words):
+  decimal_num_str = []
+  invalid_dec = []
+
+  for dec_w in decimal_words:
+    if dec_w not in nepali_number:
+      invalid_dec.append(dec_w)
+
+  if invalid_dec:
+    error_msg = f"Invalid decimal digits found: {', '.join(invalid_dec)}. Only words from 'zero' to 'nine' are allowed after 'point'."
+    raise ValueError(error_msg)
+
+  for dec_w in decimal_words:
+    decimal_num_str.append(str(nepali_number[dec_w]))
+
+  final_dec_str = '0.' + ''.join(decimal_num_str)
+  return float(final_dec_str)
+
