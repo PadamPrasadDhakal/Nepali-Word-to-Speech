@@ -121,12 +121,14 @@ def number_formulation(num_words):
     nums=[]
     for n_word in num_words:
         nums.append(nepali_number[n_word])
-    if len(nums) == 4:
+    if len(nums)>5:
+        return ()
+    elif len(nums) == 4:
         return (nums[0] * nums[1]) + nums[2] + nums[3]
     elif len(nums) == 3:
         return nums[0] * nums[1] + nums[2]
     elif len(nums) == 2:
-        if 100 in nums:
+        if 1000 in nums:
             return nums[0] * nums[1]
         else:
             return nums[0] + nums[1]
