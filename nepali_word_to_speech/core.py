@@ -4,7 +4,8 @@ nepali_number={
     'sunya':0,
     'ek':1,
     'dui':2,
-    "teen":3,
+    'teen':3,
+    'tin':3,
     'chaar':4,
     'paach':5,
     'cha':6,
@@ -101,6 +102,7 @@ nepali_number={
     'santanabbe':97,
     'anthanabbe':98,
     'unhansaya':99,
+    #others
     'saya':100,
     'hajar':1000,
     'lakh':100000,
@@ -121,8 +123,16 @@ def number_formulation(num_words):
     nums=[]
     for n_word in num_words:
         nums.append(nepali_number[n_word])
-    if len(nums)>5:
-        return ()
+    if len(nums)==13:
+            return (nums[0]*nums[1] + nums[2]*nums[3] + nums[4]*nums[5] + nums[6]*nums[7] + nums[8]*nums[9] + nums[10]*nums[11] + nums[12])
+    elif len(nums)==11:
+            return (nums[0]*nums[1] + nums[2]*nums[3] + nums[4]*nums[5] + nums[6]*nums[7] + nums[8]*nums[9] + nums[10])
+    elif len(nums)==9:
+            return (nums[0]*nums[1] + nums[2]*nums[3] + nums[4]*nums[5] + nums[6]*nums[7] + nums[8])
+    elif len(nums)==7:
+            return (nums[0]*nums[1] + nums[2]*nums[3] + nums[4]*nums[5] + nums[6])
+    elif len(nums)==5:
+            return (nums[0]*nums[1] + nums[2]*nums[3] + nums[4])
     elif len(nums) == 4:
         return (nums[0] * nums[1]) + nums[2] + nums[3]
     elif len(nums) == 3:
@@ -134,3 +144,4 @@ def number_formulation(num_words):
             return nums[0] + nums[1]
     else:
         return nums[0]
+    
