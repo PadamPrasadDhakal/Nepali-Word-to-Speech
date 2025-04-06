@@ -198,6 +198,13 @@ Returns:
 Raises:
     ValueError: For invalid inputs, with specific error messages explaining the problem
 """
- def word_to_num(number_sentence):
-         if type(number_sentence) is not str:
-            raise ValueError("Type of input is not string! Please enter a valid number word (e.g., 'tin hajar cha saya nau') for more info do get_numbers_info()")
+def word_to_num(number_sentence):
+    if type(number_sentence) is not str:
+        raise ValueError("Type of input is not string! Please enter a valid number word (e.g., 'tin hajar cha saya nau') for more info do get_numbers_info()")
+        
+    number_sentence = number_sentence.replace('-', ' ')
+    number_sentence = number_sentence.lower() #converting input to lowercase
+    
+    if(number_sentence.isdigit()):  # return the number if user enters a number string
+        return int(number_sentence)
+

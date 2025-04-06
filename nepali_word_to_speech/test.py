@@ -8,3 +8,5 @@ print(f"Das hajar nau saye paach",core.number_formulation(['terah','kharba','tin
 # print(nums[0]*nums[1] + nums[2]*nums[3] + nums[4]*nums[5] + nums[6]*nums[7] + nums[8])
 
 print(f"Decimal value of ['ek', 'chaar']: {core.get_decimal(['ek','chaar'])}")
+
+print(core.word_to_num("ek"))
